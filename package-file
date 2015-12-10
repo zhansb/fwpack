@@ -1,0 +1,12 @@
+package-file	package-file
+bootloader	RKLoader.bin
+parameter	parameter
+misc		misc.img
+resource    resource.img
+kernel		kernel.img
+boot        boot.img
+recovery	recovery.img
+system		system.img
+backup		RESERVED
+update-script	update-script
+recover-script	recover-script
