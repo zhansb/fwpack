@@ -13,6 +13,8 @@ PACK_PATH="$(dirname $(readlink -f $0))"
 BOARD_PATH="$PACK_PATH/$TARGET_PRODUCT"
 BIN_DIR="$PACK_PATH/bin/"
 
+source "$BOARD_PATH/pack.conf"
+
 check_file_version()
 {
     # $1 file name
@@ -25,7 +27,7 @@ check_file_version()
 if [ z"$1" != "z" ] ; then
 	UPDATE_IMG="$1"
 else
-	UPDATE_IMG="Firefly-RK3288_$(date -d today +%y%m%d).img" 
+	UPDATE_IMG="${TARGET_PRODUCT}_${PLATFORM_VERSION}_$(date -d today +%y%m%d).img" 
 fi
 
 check_file_version "parameter"
